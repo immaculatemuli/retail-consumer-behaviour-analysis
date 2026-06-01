@@ -1,0 +1,198 @@
+
+================================================================================
+        RETAIL CONSUMER BEHAVIOUR ANALYSIS — FINAL REPORT
+================================================================================
+
+Prepared by: Immaculate Mutheu Muli
+Date:  1st June 2026
+Dataset: Customer Shopping Trends (Kaggle)
+Tools Used: Python, SQL, Power BI, GitHub
+
+================================================================================
+1. EXECUTIVE SUMMARY
+================================================================================
+
+This report presents a comprehensive analysis of consumer shopping behaviour
+for a retail company. Using a dataset of 3,900 customer transactions across
+18 variables, we investigated purchasing patterns, seasonal trends, discount
+effectiveness, and demographic preferences.
+
+The analysis was conducted using Python for data cleaning and exploration,
+SQL for business query analysis, and Power BI for interactive visualisation.
+
+Key findings show that clothing is the top-performing category, that Fall
+is the strongest sales season, and that discounts do not significantly
+increase the average purchase amount — suggesting the company should
+reconsider its discount strategy.
+
+================================================================================
+2. PROBLEM STATEMENT
+================================================================================
+
+A leading retail company wants to better understand its customers shopping
+behaviour in order to improve sales, customer satisfaction and long-term
+loyalty. Management has noticed changes in purchasing patterns across
+demographics, product categories and sales channels.
+
+They are particularly interested in uncovering which factors — such as
+discounts, reviews, seasons or payment preferences — drive consumer
+decisions and repeat purchases.
+
+OVERARCHING BUSINESS QUESTION:
+How can the company leverage consumer shopping data to identify trends,
+improve customer engagement, and optimise marketing and product strategies?
+
+================================================================================
+3. DATASET OVERVIEW
+================================================================================
+
+Source:   Kaggle — Customer Shopping Trends Dataset
+Link:     https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset
+Rows:     3,900 customer transactions
+Columns:  18 variables
+
+KEY COLUMNS:
+------------------------------------------------------------
+Column                  Description
+------------------------------------------------------------
+Customer ID             Unique identifier per customer
+Age                     Customer age
+Gender                  Male / Female
+Item Purchased          Name of the product bought
+Category                Clothing, Footwear, Accessories, Outerwear
+Purchase Amount (USD)   Transaction value
+Season                  Spring, Summer, Fall, Winter
+Review Rating           Customer rating (1.0 - 5.0)
+Subscription Status     Whether customer has a subscription
+Discount Applied        Whether a discount was used
+Promo Code Used         Whether a promo code was used
+Payment Method          Credit Card, PayPal, Cash, etc.
+Frequency of Purchases  How often the customer shops
+Previous Purchases      Number of past purchases
+------------------------------------------------------------
+
+================================================================================
+4. METHODOLOGY
+================================================================================
+
+PHASE 1 — DATA PREPARATION (Python)
+- Loaded dataset using Pandas
+- Checked for missing values (none found)
+- Removed duplicate rows
+- Standardised column names
+- Converted Yes/No columns to binary (1/0)
+- Engineered new feature: Spend Category (Low/Medium/High)
+- Exported cleaned dataset for SQL and Power BI
+
+PHASE 2 — EXPLORATORY DATA ANALYSIS (Python + Matplotlib/Seaborn)
+- Generated 8 visualisation charts
+- Analysed distributions of age, gender, category, season
+- Investigated relationships between ratings, discounts and spend
+
+PHASE 3 — BUSINESS QUERY ANALYSIS (SQL)
+- Ran 7 structured SQL queries using pandasql
+- Answered specific business questions on revenue, customers,
+  seasonal performance, discount impact and payment preferences
+
+PHASE 4 — DASHBOARD (Power BI)
+- Built 6 interactive visuals
+- Added 3 slicers for Gender, Season and Category
+- Exported dashboard as PDF
+
+================================================================================
+5. KEY FINDINGS
+================================================================================
+
+FINDING 1 — CATEGORY PERFORMANCE
+- Clothing is the highest revenue-generating category
+- Accessories and Footwear follow closely behind
+- Outerwear generates the least revenue overall
+- RECOMMENDATION: Increase inventory and marketing spend on Clothing
+  and Accessories, especially heading into peak seasons
+
+FINDING 2 — SEASONAL TRENDS
+- Fall generates the highest total sales
+- Spring and Winter follow closely
+- Summer is the weakest season for revenue
+- RECOMMENDATION: Launch promotional campaigns before Fall season
+  to capitalise on peak demand. Use Summer for clearance sales
+  and loyalty reward campaigns to maintain engagement
+
+FINDING 3 — DISCOUNT IMPACT
+- Customers who used discounts did NOT spend significantly more
+  than those who did not
+- Average review ratings are similar with or without discounts
+- RECOMMENDATION: The company should reconsider blanket discounting.
+  Instead, target discounts at low-spend customers to nudge them
+  into the Medium/High spend category rather than giving discounts
+  to customers who would buy anyway
+
+FINDING 4 — PAYMENT PREFERENCES
+- Credit Card and PayPal are the most popular payment methods
+- Cash usage is declining
+- Payment preferences are broadly similar across genders
+- RECOMMENDATION: Ensure seamless Credit Card and PayPal checkout
+  experience. Consider offering Buy Now Pay Later (BNPL) options
+  to increase average order values
+
+FINDING 5 — CUSTOMER DEMOGRAPHICS
+- The customer base skews slightly male
+- The most active age group is 25 to 45 years old
+- Older customers (55+) tend to have higher individual purchase amounts
+- RECOMMENDATION: Create targeted campaigns for the 55+ segment
+  with premium product recommendations. Engage the 25-45 group
+  through subscription loyalty programmes
+
+FINDING 6 — REVIEW RATINGS
+- Average review rating is consistently between 3.5 and 4.2
+- There is no strong correlation between higher spend and better ratings
+- Highly rated items are spread across all categories
+- RECOMMENDATION: Use high-rated items as hero products in
+  marketing materials. Investigate why ratings are not higher —
+  consider post-purchase follow-up emails to encourage reviews
+
+FINDING 7 — SUBSCRIPTION CUSTOMERS
+- Subscribed customers show higher frequency of purchases
+- They also tend to use promo codes more actively
+- RECOMMENDATION: Push non-subscribed customers toward subscription
+  plans by highlighting exclusive benefits and early access to sales
+
+================================================================================
+6. RECOMMENDATIONS SUMMARY
+================================================================================
+
+1. Focus marketing on Clothing and Accessories — highest ROI categories
+2. Launch peak campaigns before Fall — strongest revenue season
+3. Stop blanket discounting — target discounts strategically
+4. Optimise for Credit Card and PayPal checkouts
+5. Create premium campaigns for the 55+ high-spend demographic
+6. Use high-rated products as hero items in advertising
+7. Convert non-subscribers with loyalty programme incentives
+8. Investigate Summer slump with targeted engagement campaigns
+
+================================================================================
+7. LIMITATIONS
+================================================================================
+
+- The dataset is synthetic (simulated data), so findings are illustrative
+  rather than based on real business transactions
+- No time series data is available, limiting trend-over-time analysis
+- Location data is US-based and may not generalise to other markets
+- Customer ID appears once per row, limiting true repeat-purchase analysis
+
+================================================================================
+8. CONCLUSION
+================================================================================
+
+This analysis demonstrates how consumer shopping data can be systematically
+examined to uncover actionable business insights. By combining Python for
+data preparation, SQL for structured querying, and Power BI for visual
+storytelling, we built a complete end-to-end analytics pipeline.
+
+The company can use these findings to make smarter decisions about inventory,
+marketing spend, discount strategy, and customer engagement — all grounded
+in data rather than guesswork.
+
+================================================================================
+END OF REPORT
+================================================================================
