@@ -1,0 +1,13 @@
+gender,payment_method,total_users
+Female,Credit Card,223
+Female,PayPal,221
+Female,Cash,212
+Female,Venmo,208
+Female,Bank Transfer,203
+Female,Debit Card,181
+Male,Cash,458
+Male,PayPal,456
+Male,Debit Card,455
+Male,Credit Card,448
+Male,Venmo,426
+Male,Bank Transfer,409
